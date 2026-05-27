@@ -3,8 +3,8 @@ package pages
 templ Contacts() {
 	<section class="h-dvh grid place-items-center" x-data="{ shown: false }" x-intersect="shown = true">
 		<div class="flex flex-col items-center md:w-2/3 lg:w-1/2 p-5">
-			<h2 class="capitalize font-black text-5xl self-start mb-2" x-show="shown" x-transition.delay.750ms>contact us</h2>
-			<p class="capitalize" x-show="shown" x-transition.delay.1000ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident alias esse? Maxime commodi iure nesciunt reprehenderit, dolores enim ut repellendus, laudantium molestias id corporis quos dolor ipsum sapiente pariatur!</p>
+			<h2 class="capitalize font-black text-5xl self-start mb-2" x-show="shown" x-cloak x-transition.delay.750ms>contact us</h2>
+			<p class="capitalize" x-show="shown" x-cloak x-transition.delay.1000ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident alias esse? Maxime commodi iure nesciunt reprehenderit, dolores enim ut repellendus, laudantium molestias id corporis quos dolor ipsum sapiente pariatur!</p>
 		</div>
 	</section>
 }

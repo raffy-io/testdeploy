@@ -29,7 +29,7 @@ func Nav() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<nav class=\"flex justify-between p-5 fixed top-0 left-0 right-0\" x-data=\"{ shown: false }\" x-intersect=\"shown = true\"><a href=\"/\"><h6 x-show=\"shown\" x-transition.opacity.delay.500ms>LOGO</h6></a><ul class=\"flex gap-2\" x-show=\"shown\" x-transition.opacity.delay.500ms><li><a class=\"capitalize\" href=\"/\">home</a></li><li><a class=\"capitalize\" href=\"/about\">about</a></li><li><a class=\"capitalize\" href=\"/contacts\">contacts</a></li></ul></nav>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<nav class=\"flex justify-between p-5 fixed top-0 left-0 right-0\" x-data=\"{ shown: false }\" x-intersect=\"shown = true\"><a href=\"/\"><h6 class=\"font-black\" x-show=\"shown\" x-cloak x-transition.opacity.delay.500ms>LOGO</h6></a><ul class=\"flex gap-2\" x-show=\"shown\" x-cloak x-transition.opacity.delay.500ms><li><a class=\"capitalize\" href=\"/\">home</a></li><li><a class=\"capitalize\" href=\"/about\">about</a></li><li><a class=\"capitalize\" href=\"/contacts\">contacts</a></li></ul></nav>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

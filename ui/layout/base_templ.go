@@ -60,7 +60,7 @@ func BaseLayout(title string, body templ.Component) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</main><footer class=\"grid place-items-center p-5 fixed bottom-0 left-0 right-0\" x-data=\"{date: new Date(),shown: false}\" x-intersect=\"shown = true\"><p class=\"capitalize\" x-show=\"shown\" x-transition.opacity.delay.500ms>test deploy <span x-text=\"date.getFullYear()\"></span></p></footer></body></html>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</main><footer class=\"grid place-items-center p-5 fixed bottom-0 left-0 right-0\" x-data=\"{date: new Date(),shown: false}\" x-intersect=\"shown = true\"><p class=\"capitalize\" x-show=\"shown\" x-cloak x-transition.opacity.delay.500ms>test deploy <span x-text=\"date.getFullYear()\"></span></p></footer></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
