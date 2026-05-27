@@ -1,0 +1,215 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+:root {
+  --shadow-dark: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+  --shadow-light: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out;
+  --xs: 0.8rem;
+  --sm: 1.6rem;
+  --md: 2.4rem;
+  --lg: 3.2rem;
+  --xl: 4rem;
+  --2xl: 4.8rem;
+  --3xl: 5.6rem;
+  --4xl: 6.4rem;
+  --5xl: 7.2rem;
+  --6xl: 8rem;
+  --7xl: 8.8rem;
+  --8xl: 9.6rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/*
+
+Typography System
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+- multiples of 8
+8,16,24,32,64,128,256
+
+*/
+p {
+  font-size: 1.6rem;
+  letter-spacing: normal;
+  line-height: 150%;
+}
+
+h6 {
+  font-size: 2rem;
+  letter-spacing: -0.5%;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 3.125rem;
+  line-height: 130%;
+}
+
+h3 {
+  font-size: 3.906rem;
+  letter-spacing: -1.5%;
+}
+
+h2 {
+  font-size: 4.883rem;
+  line-height: 110%;
+}
+
+h1 {
+  font-size: 6.104rem;
+  letter-spacing: -2%;
+  line-height: 100%;
+}
+
+.mb-xs {
+  margin-bottom: var(--xs);
+}
+
+.mb-sm {
+  margin-bottom: var(--sm);
+}
+
+.mb-md {
+  margin-bottom: var(--md);
+}
+
+.mb-lg {
+  margin-bottom: var(--lg);
+}
+
+.mb-xl {
+  margin-bottom: var(--xl);
+}
+
+.mt-xs {
+  margin-top: var(--xs);
+}
+
+.mt-sm {
+  margin-top: var(--sm);
+}
+
+.mt-md {
+  margin-top: var(--md);
+}
+
+.mt-lg {
+  margin-top: var(--lg);
+}
+
+.mt-xl {
+  margin-top: var(--xl);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding-left: var(--8xl);
+  padding-right: var(--8xl);
+  padding-top: var(--xl);
+  padding-top: var(--xl);
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    padding-left: var(--md);
+    padding-right: var(--md);
+    padding-top: var(--md);
+    padding-top: var(--md);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
