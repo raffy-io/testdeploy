@@ -7,12 +7,17 @@ import (
 	"os"
 
 	"github.com/raffy-io/testdeploy"
+	"github.com/raffy-io/testdeploy/internal/handlers"
 )
 
 func main() {
 
 	// routes
 	mux := http.NewServeMux()
+
+	mux.HandleFunc("GET /",handlers.GetHome)
+	mux.HandleFunc("GET /about",handlers.GetAbout)
+	mux.HandleFunc("GET /contacts",handlers.GetContacts)
 
 	// static assets
 	staticFS,err := fs.Sub(testdeploy.EmbeddedAssets,"static")

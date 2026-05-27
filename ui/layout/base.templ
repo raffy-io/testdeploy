@@ -1,0 +1,27 @@
+package layout
+
+import "github.com/raffy-io/testdeploy/ui/components"
+
+templ BaseLayout(title string, body templ.Component) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link rel="stylesheet" href="./static/css/style.css"/>
+			<script src="./static/js/alpine.min.js" defer></script>
+			<title>{ title }</title>
+		</head>
+		<body>
+			<header>
+				@components.Nav()
+			</header>
+			<main>
+				@body
+			</main>
+			<footer class="grid place-items-center p-5 fixed bottom-0 left-0 right-0" x-data="{date: new Date()}">
+				<p class="capitalize">test deploy <span x-text="date.getFullYear()"></span></p>
+			</footer>
+		</body>
+	</html>
+}
