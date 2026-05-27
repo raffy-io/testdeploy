@@ -29,7 +29,7 @@ func Contacts() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"h-dvh grid place-items-center\"><div class=\"flex flex-col items-center md:w-2/3 lg:w-1/2 p-5\"><h2 class=\"capitalize font-black text-5xl self-start mb-2\">contact us</h2><p class=\"capitalize\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident alias esse? Maxime commodi iure nesciunt reprehenderit, dolores enim ut repellendus, laudantium molestias id corporis quos dolor ipsum sapiente pariatur!</p></div></section>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"h-dvh grid place-items-center\" x-data=\"{ shown: false }\" x-intersect=\"shown = true\"><div class=\"flex flex-col items-center md:w-2/3 lg:w-1/2 p-5\"><h2 class=\"capitalize font-black text-5xl self-start mb-2\" x-show=\"shown\" x-transition.delay.750ms>contact us</h2><p class=\"capitalize\" x-show=\"shown\" x-transition.delay.1000ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident alias esse? Maxime commodi iure nesciunt reprehenderit, dolores enim ut repellendus, laudantium molestias id corporis quos dolor ipsum sapiente pariatur!</p></div></section>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

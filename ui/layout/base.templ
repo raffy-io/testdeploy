@@ -9,7 +9,8 @@ templ BaseLayout(title string, body templ.Component) {
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<link rel="stylesheet" href="./static/css/style.css"/>
-			<script src="./static/js/alpine.min.js" defer></script>
+			<script defer src="/static/js/alpine-intersect.min.js"></script>
+			<script defer src="/static/js/alpine.min.js"></script>
 			<title>{ title }</title>
 		</head>
 		<body>
@@ -19,8 +20,8 @@ templ BaseLayout(title string, body templ.Component) {
 			<main>
 				@body
 			</main>
-			<footer class="grid place-items-center p-5 fixed bottom-0 left-0 right-0" x-data="{date: new Date()}">
-				<p class="capitalize">test deploy <span x-text="date.getFullYear()"></span></p>
+			<footer class="grid place-items-center p-5 fixed bottom-0 left-0 right-0" x-data="{date: new Date(),shown: false}" x-intersect="shown = true">
+				<p class="capitalize" x-show="shown" x-transition.opacity.delay.500ms>test deploy <span x-text="date.getFullYear()"></span></p>
 			</footer>
 		</body>
 	</html>
